@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RIGO Car Rentals - TIAGO CNG Hire in Patna</title>
+    <meta name="description" content="Premium TIAGO CNG car rental in Patna for outstation trips, weddings, hourly rentals. Affordable rates with free Wi-Fi option.">
+    <meta name="keywords" content="car rental Patna, TIAGO CNG hire, wedding car Patna, outstation car rental, taxi service Patna">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --success: #27ae60;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: var(--secondary);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: var(--secondary);
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1494972308805-463bc619d34e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+        
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: #c0392b;
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid white;
+            margin-left: 1rem;
+        }
+        
+        .btn-outline:hover {
+            background-color: white;
+            color: var(--primary);
+        }
+        
+        .section {
+            padding: 4rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--dark);
+        }
+        
+        .section-title h2 {
+            font-size: 2.2rem;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary);
+        }
+        
+        .car-details {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .car-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .car-image {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .car-image img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+        
+        .car-specs {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .car-specs h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+        
+        .spec-item {
+            margin-bottom: 1rem;
+        }
+        
+        .spec-item strong {
+            display: inline-block;
+            width: 150px;
+            color: var(--dark);
+        }
+        
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .feature {
+            background-color: var(--light);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 1.5rem;
+            transition: transform 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-card i {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+        
+        .service-card h3 {
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+        
+        .counter {
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 3rem 0;
+        }
+        
+        .counter h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .counter-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--secondary);
+        }
+        
+        .booking-form {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        .form-row {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .form-row .form-group {
+            flex: 1;
+        }
+        
+        .fare-display {
+            background-color: var(--light);
+            padding: 1rem;
+            border-radius: 5px;
+            margin-top: 1rem;
+            font-weight: bold;
+            text-align: center;
+            display: none;
+        }
+        
+        .reviews {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .review-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 1.5rem;
+        }
+        
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+        
+        .reviewer {
+            font-weight: bold;
+        }
+        
+        .rating {
+            color: #f39c12;
+        }
+        
+        .review-date {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+        
+        .review-reply {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
+            font-style: italic;
+            color: #7f8c8d;
+        }
+        
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .contact-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .contact-card i {
+            font-size: 2rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+        
+        .contact-card a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .contact-card a:hover {
+            color: var(--secondary);
+        }
+        
+        .faq-item {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .faq-question {
+            font-weight: bold;
+            margin-bottom: 1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-answer {
+            display: none;
+        }
+        
+        .faq-answer.show {
+            display: block;
+        }
+        
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--secondary);
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-column ul li a {
+            color: #bdc3c7;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column ul li a:hover {
+            color: white;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .social-links a {
+            color: white;
+            background-color: rgba(255,255,255,0.1);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--secondary);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #bdc3c7;
+            font-size: 0.9rem;
+        }
+        
+        /* Mobile menu */
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+        }
+        
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--primary);
+                padding: 1rem;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+                display: none;
+            }
+            
+            nav.active {
+                display: block;
+            }
+            
+            nav ul {
+                flex-direction: column;
+            }
+            
+            nav ul li {
+                margin: 0;
+                margin-bottom: 1rem;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+            
+            .btn-outline {
+                margin-left: 0;
+                margin-top: 1rem;
+            }
+            
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a href="#" class="logo">R<span>IGO</span></a>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#car">Our Car</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#booking">Booking</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <div>
+                <h1>Premium TIAGO CNG Car Rental in Patna</h1>
+                <p>Experience comfortable and affordable rides for outstation trips, weddings, and daily commutes with our well-maintained TIAGO CNG car.</p>
+                <a href="#booking" class="btn">Book Now</a>
+                <a href="#contact" class="btn btn-outline">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="car">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Car</h2>
+            </div>
+            <div class="car-details">
+                <div class="car-info">
+                    <div class="car-image">
+                        <img src="https://imgd.aeplcdn.com/1280x720/n/cw/ec/40432/tigor-exterior-right-front-three-quarter-2.jpeg" alt="TIAGO CNG Daytona Grey">
+                    </div>
+                    <div class="car-specs">
+                        <h3>TATA TIAGO CNG (Dual Fuel)</h3>
+                        <div class="spec-item">
+                            <strong>Model:</strong> TIAGO CNG TWN XM 1.2 RTN
+                        </div>
+                        <div class="spec-item">
+                            <strong>Color:</strong> Daytona Grey
+                        </div>
+                        <div class="spec-item">
+                            <strong>Type:</strong> CNG-Petrol (Dual Fuel)
+                        </div>
+                        <div class="spec-item">
+                            <strong>Seating Capacity:</strong> 5
+                        </div>
+                        <div class="features">
+                            <span class="feature">AC</span>
+                            <span class="feature">Power Windows</span>
+                            <span class="feature">Music System</span>
+                            <span class="feature">Safety Features</span>
+                            <span class="feature">Free Wi-Fi Option</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </section>
+
+    <section class="section" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+            </div>
+            <div class="services">
+                <div class="service-card">
+                    <i class="fas fa-route"></i>
+                    <h3>Outstation Trips</h3>
+                    <p>Comfortable long-distance rentals for your travel needs with well-maintained cars and experienced drivers.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-rings-wedding"></i>
+                    <h3>Wedding & Events</h3>
+                    <p>Beautifully decorated cars for weddings and special occasions to make your day memorable.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-ad"></i>
+                    <h3>Advertisement Space</h3>
+                    <p>Promote your brand with ads on our cars that travel throughout Patna and beyond.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-wifi"></i>
+                    <h3>Free Wi-Fi</h3>
+                    <p>Stay connected during your ride with our optional Wi-Fi service (chargeable add-on).</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-plane"></i>
+                    <h3>Airport Transfers</h3>
+                    <p>Reliable pickup and drop services to/from Patna Airport and railway stations.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Hourly Rentals</h3>
+                    <p>Flexible hourly rentals for your local travel needs at competitive rates.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="booking">
+        <div class="container">
+            <div class="section-title">
+                <h2>Book Your Ride</h2>
+            </div>
+            <div class="booking-form">
+                <form id="bookingForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email (Optional)</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="trip-type">Trip Type</label>
+                            <select id="trip-type" name="trip-type" required>
+                                <option value="">Select Trip Type</option>
+                                <option value="hourly">Hourly Rental</option>
+                                <option value="outstation">Outstation Trip</option>
+                                <option value="wedding">Wedding/Event</option>
+                                <option value="airport">Airport Transfer</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="date">Date</label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="pickup-time">Pickup Time</label>
+                            <input type="time" id="pickup-time" name="pickup-time" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="duration">Duration (Hours)</label>
+                            <input type="number" id="duration" name="duration" min="1" value="1">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="pickup-location">Pickup Location</label>
+                        <input type="text" id="pickup-location" name="pickup-location" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="destination">Destination (For Outstation)</label>
+                        <input type="text" id="destination" name="destination">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Special Requirements</label>
+                        <textarea id="message" name="message" rows="3"></textarea>
+                    </div>
+                    <div class="fare-display" id="fareDisplay">
+                        Estimated Fare: ₹<span id="fareAmount">0</span>
+                    </div>
+                    <button type="submit" class="btn" style="width: 100%;">Send Booking Request</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="reviews">
+        <div class="container">
+            <div class="section-title">
+                <h2>Customer Reviews</h2>
+            </div>
+            <div class="reviews">
+                <div class="review-card">
+                    <div class="review-header">
+                        <div>
+                            <div class="reviewer">Rahul Kumar</div>
+                            <div class="rating">★★★★★</div>
+                        </div>
+                        <div class="review-date">15 Jan 2023</div>
+                    </div>
+                    <p>Excellent service! The car was clean and comfortable. Driver was punctual and polite. Will definitely book again for my next trip.</p>
+                    <div class="review-reply">
+                        <strong>Owner's Reply:</strong> Thank you Rahul for your kind words. We look forward to serving you again!
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div>
+                            <div class="reviewer">Amit Sharma</div>
+                            <div class="rating">★★★★★</div>
+                        </div>
+                        <div class="review-date">28 March 2025</div>
+                    </div>
+                    <p>Best CNG car rental in Patna! Very economical for daily commute. The free Wi-Fi add-on is great for my work calls.</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 3rem;">
+                <button class="btn" id="addReviewBtn">Add Your Review</button>
+            </div>
+            <div class="booking-form" id="reviewForm" style="display: none; margin-top: 2rem;">
+                <h3 style="text-align: center; margin-bottom: 1.5rem;">Write a Review</h3>
+                <form id="reviewSubmitForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="review-name">Your Name</label>
+                            <input type="text" id="review-name" name="review-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="review-rating">Rating</label>
+                            <select id="review-rating" name="review-rating" required>
+                                <option value="5">★★★★★ (5)</option>
+                                <option value="4">★★★★☆ (4)</option>
+                                <option value="3">★★★☆☆ (3)</option>
+                                <option value="2">★★☆☆☆ (2)</option>
+                                <option value="1">★☆☆☆☆ (1)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="review-text">Your Review</label>
+                        <textarea id="review-text" name="review-text" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn" style="width: 100%;">Submit Review</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+            </div>
+            <div class="contact-info">
+                <div class="contact-card">
+                    <i class="fas fa-phone-alt"></i>
+                    <h3>Call Us</h3>
+                    <p><a href="tel:+919835474730">+91 9835474730</a></p>
+                </div>
+                <div class="contact-card">
+                    <i class="fab fa-whatsapp"></i>
+                    <h3>WhatsApp</h3>
+                    <p><a href="https://wa.me/919835474730" target="_blank">+91 9835474730</a></p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Location</h3>
+                    <p>Patna, Bihar</p>
+                </div>
+            </div>
+            <div class="booking-form">
+                <form id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="contact-name">Full Name</label>
+                            <input type="text" id="contact-name" name="contact-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-phone">Phone Number</label>
+                            <input type="tel" id="contact-phone" name="contact-phone" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-email">Email (Optional)</label>
+                        <input type="email" id="contact-email" name="contact-email">
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-subject">Subject</label>
+                        <input type="text" id="contact-subject" name="contact-subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-message">Message</label>
+                        <textarea id="contact-message" name="contact-message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn" style="width: 100%;">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="faq">
+        <div class="container">
+            <div class="section-title">
+                <h2>FAQ</h2>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What are your rates for hourly rental?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Our standard rate for hourly rental is ₹250 per hour with a minimum of 4 hours booking. For 8+ hours, we offer discounted packages.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Is fuel included in the rental price?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>For local rentals, fuel (CNG/Petrol) is included. For outstation trips, the car will be provided with a full tank and should be returned with a full tank.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What is your cancellation policy?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Cancellations made 24 hours before the booking time receive a full refund. Cancellations within 24 hours may incur a charge of 50% of the booking amount.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Do you provide drivers?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, all our rentals come with experienced, verified drivers at no extra cost. The driver's food and accommodation during outstation trips are to be taken care of by the customer.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What payment methods do you accept?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>We accept UPI payments (PhonePe, Google Pay, Paytm), credit/debit cards, and cash. A 20% advance is required to confirm bookings.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>RIGO Rentals</h3>
+                    <p>Premium car rental service in Patna offering comfortable and affordable rides with our TIAGO CNG car for all your travel needs.</p>
+                    <div class="social-links" style="margin-top: 1rem;">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/919835474730" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#car">Our Car</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#booking">Booking</a></li>
+                        <li><a href="#reviews">Reviews</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Outstation Trips</a></li>
+                        <li><a href="#">Wedding & Events</a></li>
+                        <li><a href="#">Advertisement</a></li>
+                        <li><a href="#">Airport Transfers</a></li>
+                        <li><a href="#">Hourly Rentals</a></li>
+                        <li><a href="#">Free Wi-Fi Option</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-phone-alt"></i> <a href="tel:+919835474730">+91 9835474730</a></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/919835474730" target="_blank">WhatsApp</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> Patna, Bihar</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 RIGO Car Rentals. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('nav').classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.querySelector('nav').classList.remove('active');
+            });
+        });
+
+        // FAQ accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                const answer = this.nextElementSibling;
+                answer.classList.toggle('show');
+                const icon = this.querySelector('i');
+                if (answer.classList.contains('show')) {
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                } else {
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                }
+            });
+        });
+
+        // Show review form
+        document.getElementById('addReviewBtn').addEventListener('click', function() {
+            document.getElementById('reviewForm').style.display = 'block';
+            this.style.display = 'none';
+            window.scrollBy(0, 200); // Scroll down a bit
+        });
+
+        // Visitor counter - random increment every 5-15 seconds
+
+        // Fare calculator
+        const tripType = document.getElementById('trip-type');
+        const duration = document.getElementById('duration');
+        const fareDisplay = document.getElementById('fareDisplay');
+        const fareAmount = document.getElementById('fareAmount');
+        
+        function calculateFare() {
+            let fare = 0;
+            const hours = parseInt(duration.value) || 1;
+            
+            if (tripType.value === 'hourly') {
+                fare = hours * 200;
+                if (hours >= 8) fare *= 0.9; // 10% discount for 8+ hours
+            } else if (tripType.value === 'outstation') {
+                fare = 1500 + (hours * 100);
+            } else if (tripType.value === 'wedding') {
+                fare = 3000; // Base wedding fare
+            } else if (tripType.value === 'airport') {
+                fare = 800; // Fixed airport transfer rate
+            }
+            
+            if (fare > 0) {
+                fareDisplay.style.display = 'block';
+                fareAmount.textContent = fare;
+            } else {
+                fareDisplay.style.display = 'none';
+            }
+        }
+        
+        tripType.addEventListener('change', calculateFare);
+        duration.addEventListener('input', calculateFare);
+
+        // WhatsApp booking form submission
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            const tripType = document.getElementById('trip-type').value;
+            const date = document.getElementById('date').value;
+            const pickupTime = document.getElementById('pickup-time').value;
+            const duration = document.getElementById('duration').value;
+            const pickupLocation = document.getElementById('pickup-location').value;
+            const destination = document.getElementById('destination').value;
+            const message = document.getElementById('message').value;
+            
+            const whatsappMessage = `*New Booking Request*%0A%0A` +
+                                  `*Name:* ${name}%0A` +
+                                  `*Phone:* ${phone}%0A` +
+                                  `*Email:* ${email || 'Not provided'}%0A` +
+                                  `*Trip Type:* ${tripType}%0A` +
+                                  `*Date:* ${date}%0A` +
+                                  `*Pickup Time:* ${pickupTime}%0A` +
+                                  `*Duration:* ${duration} hours%0A` +
+                                  `*Pickup Location:* ${pickupLocation}%0A` +
+                                  `*Destination:* ${destination || 'Not applicable'}%0A` +
+                                  `*Special Requirements:* ${message || 'None'}`;
+            
+            window.open(`https://wa.me/919835474730?text=${whatsappMessage}`, '_blank');
+        });
+
+        // WhatsApp contact form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('contact-name').value;
+            const phone = document.getElementById('contact-phone').value;
+            const email = document.getElementById('contact-email').value;
+            const subject = document.getElementById('contact-subject').value;
+            const message = document.getElementById('contact-message').value;
+            
+            const whatsappMessage = `*New Contact Request*%0A%0A` +
+                                  `*Name:* ${name}%0A` +
+                                  `*Phone:* ${phone}%0A` +
+                                  `*Email:* ${email || 'Not provided'}%0A` +
+                                  `*Subject:* ${subject}%0A` +
+                                  `*Message:* ${message}`;
+            
+            window.open(`https://wa.me/919835474730?text=${whatsappMessage}`, '_blank');
+        });
+
+        // Review form submission
+        document.getElementById('reviewSubmitForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('review-name').value;
+            const rating = document.getElementById('review-rating').value;
+            const reviewText = document.getElementById('review-text').value;
+            
+            // In a real implementation, you would send this data to your server
+            alert('Thank you for your review! It will be displayed after moderation.');
+            document.getElementById('reviewSubmitForm').reset();
+            document.getElementById('reviewForm').style.display = 'none';
+            document.getElementById('addReviewBtn').style.display = 'inline-block';
+        });
+
+        // Set minimum date for booking to today
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('date').min = today;
+    </script>
+</body>
+</html>
